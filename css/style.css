@@ -134,6 +134,25 @@ section:nth-child(odd) {
     flex: 0 1 auto; /* ボタンのサイズを自動調整 */
 }
 
+/* プロジェクトセクションのヘッダーと画像のスタイル */
+.project-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.project-header h3 {
+    margin-bottom: 0;
+}
+
+.certificate-img {
+    width: 80px; /* 画像のサイズを小さく設定 */
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 .github-link {
     background-color: #007bff;
 }
