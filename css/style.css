@@ -1,46 +1,240 @@
-/* 背景アニメーション */
-.background-animation {
-    position: fixed; /* 画面全体に固定 */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #000;
-    z-index: -1; /* 他のコンテンツの下に配置 */
+/* 基本設定 */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #e4e9ee;
+    color: #333;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2, h3 {
+    font-weight: 700;
+    color: #0056b3;
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    border-bottom: 2px solid #0056b3;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* ヘッダー */
+header {
+    background: linear-gradient(to right, #002f62, #2890ff);
+    color: #fff;
+    padding: 50px 0;
+    text-align: center;
+    position: relative;
     overflow: hidden;
 }
 
-.background-animation::before,
-.background-animation::after {
-    content: '';
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    background-image:
-        /* ノード (点) */
-        radial-gradient(circle, rgba(144, 202, 249, 0.4) 1px, transparent 1px),
-        /* ライン */
-        linear-gradient(rgba(144, 202, 249, 0.1) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(144, 202, 249, 0.1) 1px, transparent 1px);
-    background-size: 50px 50px;
-    opacity: 0.8;
+.header-content {
+    position: relative;
+    z-index: 1;
 }
 
-.background-animation::before {
-    animation: move-grid 10s linear infinite;
+.catchphrase {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: 700;
+    color: #ffffff
 }
 
-.background-animation::after {
-    background-position: 25px 25px;
-    animation: move-grid-reverse 12s linear infinite;
+.name {
+    font-size: 1.2em;
+    margin-top: 10px;
+    font-weight: 400;
 }
 
-@keyframes move-grid {
-    0% { background-position: 0 0; }
-    100% { background-position: 50px 50px; }
+/* セクション */
+section {
+    padding: 60px 0;
 }
 
-@keyframes move-grid-reverse {
-    0% { background-position: 25px 25px; }
-    100% { background-position: 75px 75px; }
+section:nth-child(odd) {
+    background-color: #fff;
+}
+
+/* 自己紹介セクション */
+.profile-intro {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.profile-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.skills-list li {
+    margin-bottom: 5px;
+}
+
+/* プロジェクトセクション */
+.project-item {
+    background-color: #f9f9f9;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+}
+
+.project-item h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+.project-description {
+    white-space: pre-wrap;
+}
+
+.project-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end; /* ボタンを右寄せにする */
+}
+
+.github-link, .video-link, .report-link {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center; /* テキストを中央揃えにする */
+    white-space: nowrap; /* テキストの折り返しを防ぐ */
+    flex: 0 1 auto; /* ボタンのサイズを自動調整 */
+}
+
+/* プロジェクトセクションのヘッダーと画像のスタイル */
+.project-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.project-header h3 {
+    margin-bottom: 0;
+}
+
+.certificate-img {
+    width: 120px; /* 画像のサイズを大きく設定 */
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.github-link {
+    background-color: #007bff;
+}
+
+.github-link:hover {
+    background-color: #0056b3;
+}
+
+.video-link {
+    background-color: #ff0000;
+}
+
+.video-link:hover {
+    background-color: #cc0000;
+}
+
+.report-link {
+    background-color: #4285f4;
+}
+
+.report-link:hover {
+    background-color: #357ae8;
+}
+
+/* フォーム */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: 700;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* フッター */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: #fff;
+    margin-top: 40px;
+}
+
+/* レスポンシブデザイン */
+@media (max-width: 768px) {
+    .profile-intro {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .profile-photo {
+        margin-bottom: 20px;
+    }
+
+    .project-links {
+        flex-direction: column;
+        gap: 10px;
+    }
 }
