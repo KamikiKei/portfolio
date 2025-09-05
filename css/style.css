@@ -258,6 +258,28 @@ button:hover {
     background-color: #0056b3;
 }
 
+/* デザイン画像のコンテナ */
+.design-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 20px;
+    justify-content: center;
+}
+
+/* 個々のデザイン画像 */
+.design-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.design-img:hover {
+    transform: scale(1.05);
+}
+
 /* フッター */
 footer {
     text-align: center;
