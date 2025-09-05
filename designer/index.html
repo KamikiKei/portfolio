@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAIKI ISHIKAWA | ポートフォリオ</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="neural-net-canvas"></canvas>
+
+    <header>
+        <div class="header-content">
+            <h1 class="catchphrase">AIとデザインで未来を創るAIエンジニア</h1>
+            <p class="name">DAIKI ISHIKAWA</p>
+            <nav class="page-nav">
+                <a href="../engineer/index.html" class="nav-btn">エンジニア</a>
+                <a href="../designer/index.html" class="nav-btn active">デザイナー</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="about">
+            <div class="container">
+                <h2>はじめまして</h2>
+                <p class="bio">
+                    AIエンジニアとして活動する傍ら、UI/UXデザインやDTP、ロゴ制作など、クリエイティブな分野でも活動しています。
+                    技術と感性を融合させ、美しく使いやすいデザインを追求しています。
+                </p>
+                <h3>スキルセット</h3>
+                <ul class="skills-list">
+                    <li><strong>デザインツール:</strong> Figma, Adobe Illustrator, Photoshop</li>
+                    <li><strong>得意分野:</strong> UI/UXデザイン、グラフィックデザイン、アイコン作成、ロゴ制作</li>
+                    <li><strong>その他:</strong> 広告・チラシ制作、DTP、BGM制作</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2>デザイン実績</h2>
+                <div class="project-item">
+                    <h3>広告・チラシ制作</h3>
+                    <p class="project-description">
+                        （ここに広告・チラシの制作実績を記述）
+                    </p>
+                </div>
+                <div class="project-item">
+                    <h3>UI/UXデザイン</h3>
+                    <p class="project-description">
+                        （ここにUI/UXデザインの実績を記述）
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>ご相談・お問い合わせ</h2>
+                <p>名刺・広告デザイン、アイコン作成など、デザインに関するお仕事もお気軽にご相談ください。</p>
+                <form action="https://formspree.io/f/your-form-id" method="POST">
+                    <label for="name">お名前:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">メールアドレス:</label>
+                    <input type="email" id="email" name="_replyto" required>
+                    <label for="message">メッセージ:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    <button type="submit">送信</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Daiki Ishikawa. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>

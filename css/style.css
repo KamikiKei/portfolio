@@ -40,7 +40,7 @@ h2 {
 
 /* ヘッダーのh1だけ文字色を白に設定 */
 header {
-    background: linear-gradient(to right, #0056b3, #007bff);
+    background: linear-gradient(to right, #003b79, #2e93ff);
     color: #fff;
     padding: 50px 0;
     text-align: center;
@@ -64,6 +64,31 @@ header {
     font-size: 1.2em;
     margin-top: 10px;
     font-weight: 400;
+}
+
+/* ナビゲーションボタン */
+.page-nav {
+    margin-top: 20px;
+}
+
+.nav-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.nav-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-btn.active {
+    background-color: #007bff;
 }
 
 /* セクション */
