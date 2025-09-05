@@ -143,11 +143,11 @@ section:nth-child(odd) {
 
 /* デザイン画像のコンテナ */
 .design-images {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
+    display: flex; /* This is the key change */
+    flex-wrap: wrap; /* Allows images to wrap to the next line on smaller screens */
+    gap: 15px; /* Adds space between the images */
     margin-top: 20px;
-    justify-content: center;
+    justify-content: center; /* Centers the images horizontally */
 }
 
 /* 個々のデザイン画像 */
